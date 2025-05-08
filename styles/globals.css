@@ -1,21 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&family=Poppins:wght@200;300;400;700;800&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer components {
+    .nav_link {
+        @apply relative text-xl w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-yellow-400 text-white after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-right
+    }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+    .custom-bg {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.811)), url("/image/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    .heading_mini{
+        @apply text-[17px] text-white opacity-75
+    }
+
+    .heading_primary{
+        @apply mt-[0.6rem] p-2 sm:p-0 leading-[3.5rem] text-white text-[27px] md:text-[30px] lg:text-[38px] xl:text-[45px]
+    }
+
+    .dark-grey-bg {
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.836), rgba(0, 0, 0, 0.811));
+    }
+    
 }
