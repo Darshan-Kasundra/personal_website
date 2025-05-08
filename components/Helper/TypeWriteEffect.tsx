@@ -13,7 +13,7 @@ const TypeWriteEffect = () => {
             ]}
             wrapper="span"
             speed={50}
-            className="xl:text-[50px] lg:text-[40px] sm:text-[35px] text-[25px] text-white font-bold"
+            className="xl:text-[40px] lg:text-[35px] sm:text-[35px] text-[25px] text-white font-bold"
             repeat={Infinity}
         />
     )

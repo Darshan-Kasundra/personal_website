@@ -35,7 +35,7 @@ const Hero = () => {
                         </div>
                     </div>
                     <div data-aos="fade-left" data-aos-delay="2000" className="hidden md:block">
-                        <Image src="/image/hero.png" alt="hero" width={600} height={600} className="object-contain" />
+                        <Image src="/image/hero.png" alt="hero" width={500} height={500} className="object-contain" />
                     </div>
                 </div>
             </div>

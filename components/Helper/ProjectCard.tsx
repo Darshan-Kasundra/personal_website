@@ -20,19 +20,27 @@ const ProjectCard = ({ image, tech1, tech2, tech3, tech4, title, description }: 
             <div className="flex flex-col h-full">
                 <h1 className="text-[25px] text-white">{title}</h1>
                 <p className="text-white opacity-65 text-[15px] mt-[1rem]">{description}</p>
-                <div className="mt-[1.3rem] flex-1 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-[2rem] place-items-center">
-                    <h1 className="w-full px-6 py-3 bg-blue-700 text-white rounded-lg text-center">
-                        {tech1}
-                    </h1>
-                    <h1 className="w-full px-6 py-3 bg-white text-black rounded-lg text-center">
-                        {tech2}
-                    </h1>
-                    <h1 className="w-full px-6 py-3 bg-sky-500 text-black rounded-lg text-center">
-                        {tech3}
-                    </h1>
-                    <h1 className="w-full px-6 py-3 bg-blue-500 text-white rounded-lg text-center">
-                        {tech4}
-                    </h1>
+                <div className="mt-[1.3rem] flex-1 grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-4">
+                    <div className="w-full">
+                        <h1 className="w-full h-12 flex items-center justify-center bg-blue-700 text-white rounded-lg text-center">
+                            {tech1}
+                        </h1>
+                    </div>
+                    <div className="w-full">
+                        <h1 className="w-full h-12 flex items-center justify-center bg-white text-black rounded-lg text-center">
+                            {tech2}
+                        </h1>
+                    </div>
+                    <div className="w-full">
+                        <h1 className="w-full h-12 flex items-center justify-center bg-sky-500 text-black rounded-lg text-center">
+                            {tech3}
+                        </h1>
+                    </div>
+                    <div className="w-full">
+                        <h1 className="w-full h-12 flex items-center justify-center bg-blue-500 text-white rounded-lg text-center">
+                            {tech4}
+                        </h1>
+                    </div>
                 </div>
             </div>
         </div>
