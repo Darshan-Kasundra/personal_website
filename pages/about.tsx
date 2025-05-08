@@ -1,6 +1,5 @@
 import Nav from "@/components/Nav";
 import NavMobile from "@/components/NavMobile";
-import Footer from "@/components/Footer";
 import AboutMe from "@/components/AboutMe";
 
 import React, { useState } from "react";
@@ -15,7 +14,6 @@ const AboutMePage = () => {
             <NavMobile showNav={showNav} closeNav={closeNavHandler} />
             <Nav openNav={showNavHandler} />
             <AboutMe />
-            <Footer />
         </div>
     );
 };

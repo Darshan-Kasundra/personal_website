@@ -1,7 +1,6 @@
 import Nav from "@/components/Nav";
 import NavMobile from "@/components/NavMobile";
 import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
 import React, { useState, useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';

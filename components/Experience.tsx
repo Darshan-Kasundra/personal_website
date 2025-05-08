@@ -14,14 +14,14 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
             title: "Soccer Coach",
             company: "Summer FC",
             description:
-            "Led a team of 50+ players in developing their fundamental soccer abilities. Organized and directed practice sessions for 20 athletes per session. Improved overall team and individual skill performance.",
+                "Led a team of 50+ players in developing their fundamental soccer abilities. Organized and directed practice sessions for 20 athletes per session. Improved overall team and individual skill performance.",
         },
         {
             date: "Jun 2023 - Aug 2024",
             title: "Produce Clerk",
             company: "Food Basics",
             description:
-            "Organized produce shipments averaging 800 pieces, maintaining inventory in both retail displays and storage areas. Upheld rigorous quality control standards and achieved 100% compliance with health regulations. Delivered excellent customer service while handling 15+ daily product inquiries.",
+                "Organized produce shipments averaging 800 pieces, maintaining inventory in both retail displays and storage areas. Upheld rigorous quality control standards and achieved 100% compliance with health regulations. Delivered excellent customer service while handling 15+ daily product inquiries.",
         },
         {
             date: "Mar 2020 - Aug 2023",
@@ -32,8 +32,11 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
         },
     ];
 
-    // Create a ref for each experience item
-    const experienceRefs = useRef<(HTMLDivElement | null)[]>([]);
+    // Create refs array with proper initialization
+    const experienceRefs = useRef<Array<HTMLDivElement | null>>(
+        Array(experiences.length).fill(null)
+    );
+    
     const [visibleItems, setVisibleItems] = useState<boolean[]>(
         Array(experiences.length).fill(false)
     );
@@ -100,7 +103,10 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
                         return (
                             <div 
                                 key={index} 
-                                ref={el => experienceRefs.current[index] = el}
+                                ref={(el) => {
+                                    // Safer way to assign refs
+                                    experienceRefs.current[index] = el;
+                                }}
                                 className={`relative flex justify-center items-center w-full ${transitionClasses} ${animationClasses}`}
                             >
                                 {/* Left Text Box */}
@@ -136,4 +142,5 @@ const Experience = forwardRef<HTMLDivElement>((props, ref) => {
     );
 });
 
+Experience.displayName = "Experience";
 export default Experience;

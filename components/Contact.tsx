@@ -76,7 +76,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                         Contact <span className="text-yellow-400">Me</span> {" "}
                     </h1>
                     <p className="text-[15px] text-white mt-[1rem] opacity-75">
-                        Have a question or want to work on a project together, don't hesitate to reach out!!
+                        {"Have a question or want to work on a project together, don't hesitate to reach out!!"}
                     </p>
                     <h1 className="mt-[2rem] mb-[2rem] text-[30px] text-yellow-300 underline font-bold">
                         +1 (705) 992-3640
@@ -86,7 +86,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
                     {submitted ? (
                       <div className="bg-green-600 text-white p-4 rounded-md text-center">
                         <p className="font-bold text-lg">Message Sent!</p>
-                        <p>Thank you for reaching out. I'll get back to you soon.</p>
+                        <p>{"Thank you for reaching out. I'll get back to you soon."}</p>
                         <button 
                           onClick={() => setSubmitted(false)}
                           className="mt-3 py-2 px-4 bg-green-700 hover:bg-green-800 rounded-md"
@@ -155,5 +155,4 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => {
 });
 
 Contact.displayName = "Contact";
-
 export default Contact;

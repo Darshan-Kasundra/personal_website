@@ -1,6 +1,5 @@
 import Nav from "@/components/Nav";
 import NavMobile from "@/components/NavMobile";
-import Footer from "@/components/Footer";
 import Project from "@/components/Project";
 
 import React, { useState } from "react";
